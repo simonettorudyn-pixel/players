@@ -4,13 +4,14 @@ Mod client-side Fabric per **Minecraft Java 1.21**.
 
 ## Comportamento
 
-- Allarga e abbassa visivamente il modello di tutti i player: larghezza **1,65x**, altezza **0,88x**, profondità **1,35x**.
-- Con il debug hitbox standard attivato (**F3+B**), scala il riquadro visivo dei player con le stesse proporzioni.
+- Scala il modello visibile di tutti i player per corrispondere al riquadro della foto di riferimento: circa **9 × 15 cm** su uno schermo da **70 × 40 cm**, con lo screenshot a schermo intero.
+- Con **F3+B**, ingrandisce proporzionalmente il contorno visivo della hitbox dei player per raggiungere quella misura di riferimento.
 - Hitbox reali, collisioni e colpi restano invariati.
 - Non modifica mondo, FOV, telecamera o HUD.
 
+Le misure in centimetri sono una calibrazione visiva per lo screenshot di riferimento; distanza dal player, risoluzione e dimensioni dello schermo cambiano la misura fisica apparente in gioco.
+
 Richiede Fabric Loader e Java 21; non richiede Fabric API.
-Il mod Combat Hitboxes 1.0.3 nel profilo richiede Minecraft 1.21.2 o superiore e non è compatibile con Minecraft 1.21.
 
 ## Compilare
 

@@ -9,13 +9,14 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 /**
- * Allarga e abbassa solo il rendering del modello dei player.
+ * Scales only the rendered player model to match the reference 9 x 15 cm outline.
  */
 @Mixin(PlayerEntityRenderer.class)
 public abstract class LocalPlayerModelMixin {
-    private static final float PLAYER_WIDTH_SCALE = 1.65F;
-    private static final float PLAYER_HEIGHT_SCALE = 0.88F;
-    private static final float PLAYER_DEPTH_SCALE = 1.35F;
+    // Calibrated from Rudy's 1360x768 reference screenshot on a 70x40 cm display.
+    private static final float PLAYER_WIDTH_SCALE = 0.97F;
+    private static final float PLAYER_HEIGHT_SCALE = 1.22F;
+    private static final float PLAYER_DEPTH_SCALE = 0.97F;
 
     @Inject(method = "scale", at = @At("TAIL"))
     private void players$shapePlayerModel(AbstractClientPlayerEntity player, MatrixStack matrices,
