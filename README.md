@@ -4,9 +4,9 @@ Mod client-side Fabric per **Minecraft Java 1.21**.
 
 ## Comportamento
 
-- Imposta a **1,50** il rapporto orizzontale della proiezione del mondo, in modo simile alla mod VisualRatio.
-- Compensa il rendering di tutti i player per mantenerne inalterate le dimensioni visive rispetto alla visuale originale.
-- Non cambia FOV, telecamera, HUD, movimento, collisioni o hitbox. Non modifica le entità nel mondo.
+- Ingrandisce visivamente a **1,50x** il modello di tutti i player.
+- La trasformazione riguarda solo il rendering: hitbox, collisioni e dimensioni delle entità restano invariate.
+- Non modifica mondo, FOV, telecamera o HUD.
 
 Richiede Fabric Loader e Java 21; non richiede Fabric API.
 

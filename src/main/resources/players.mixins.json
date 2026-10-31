@@ -4,8 +4,7 @@
   "package": "it.rudy.players.mixin",
   "compatibilityLevel": "JAVA_21",
   "client": [
-    "LocalPlayerModelMixin",
-    "GameRendererAspectMixin"
+    "LocalPlayerModelMixin"
   ],
   "injectors": {
     "defaultRequire": 1
