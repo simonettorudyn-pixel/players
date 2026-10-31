@@ -1,8 +1,8 @@
 package it.rudy.players.mixin;
 
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.render.entity.PlayerEntityRenderer;
-import net.minecraft.client.render.entity.state.PlayerEntityRenderState;
 import net.minecraft.client.util.math.MatrixStack;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -17,9 +17,9 @@ public abstract class LocalPlayerModelMixin {
     private static final float PLAYERS_DEPTH_SCALE = 1.35F;
 
     @Inject(method = "scale", at = @At("TAIL"))
-    private void players$scaleLocalPlayerModel(PlayerEntityRenderState state, MatrixStack matrices, CallbackInfo ci) {
+    private void players$scaleLocalPlayerModel(AbstractClientPlayerEntity player, MatrixStack matrices, float tickDelta, CallbackInfo ci) {
         MinecraftClient client = MinecraftClient.getInstance();
-        if (client.player != null && state.id == client.player.getId()) {
+        if (client.player == player) {
             matrices.scale(PLAYERS_WIDTH_SCALE, PLAYERS_HEIGHT_SCALE, PLAYERS_DEPTH_SCALE);
         }
     }
