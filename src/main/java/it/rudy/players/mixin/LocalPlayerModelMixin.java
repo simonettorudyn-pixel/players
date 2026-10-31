@@ -9,16 +9,18 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 /**
- * Ingrandisce solo il modello visualizzato. Non modifica le entità
- * nel mondo, quindi hitbox e collisioni restano invariate.
+ * Allarga e abbassa solo il modello visualizzato. Non modifica entità,
+ * hitbox o collisioni.
  */
 @Mixin(PlayerEntityRenderer.class)
 public abstract class LocalPlayerModelMixin {
-    private static final float PLAYER_VISUAL_SCALE = 1.50F;
+    private static final float PLAYER_WIDTH_SCALE = 1.65F;
+    private static final float PLAYER_HEIGHT_SCALE = 0.88F;
+    private static final float PLAYER_DEPTH_SCALE = 1.35F;
 
     @Inject(method = "scale", at = @At("TAIL"))
-    private void players$enlargePlayerModel(AbstractClientPlayerEntity player, MatrixStack matrices,
-                                             float tickDelta, CallbackInfo ci) {
-        matrices.scale(PLAYER_VISUAL_SCALE, PLAYER_VISUAL_SCALE, PLAYER_VISUAL_SCALE);
+    private void players$shapePlayerModel(AbstractClientPlayerEntity player, MatrixStack matrices,
+                                           float tickDelta, CallbackInfo ci) {
+        matrices.scale(PLAYER_WIDTH_SCALE, PLAYER_HEIGHT_SCALE, PLAYER_DEPTH_SCALE);
     }
 }
