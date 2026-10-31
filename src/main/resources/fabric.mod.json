@@ -3,14 +3,14 @@
   "id": "players",
   "version": "${version}",
   "name": "Players",
-  "description": "Rende il modello del tuo player locale più largo e leggermente più basso.",
+  "description": "Allarga e abbassa visivamente i modelli dei player e i contorni Combat Hitboxes.",
   "environment": "client",
   "mixins": [
     "players.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.15.11",
-    "minecraft": "~1.21",
+    "fabricloader": ">=0.16.9",
+    "minecraft": "~1.21.4",
     "java": ">=21"
   }
 }

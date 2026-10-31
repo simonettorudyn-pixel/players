@@ -1,12 +1,12 @@
 # Players
 
-Mod client-side Fabric per **Minecraft Java 1.21**.
+Mod client-side Fabric per **Minecraft Java 1.21.4**.
 
 ## Comportamento
 
-- Allarga e abbassa visivamente il modello di tutti i player: larghezza **1,65x**, altezza **0,88x**, profondità **1,35x**.
-- Il modello può sporgere oltre il riquadro hitbox mostrato negli screenshot. Le dimensioni in centimetri sono riferimenti per quella specifica inquadratura; cambiano con la distanza dalla telecamera.
-- La trasformazione riguarda solo il rendering: hitbox, collisioni e dimensioni delle entità restano invariate.
+- Allarga e abbassa visivamente i modelli di tutti i player: larghezza **1,65x**, altezza **0,88x**, profondità **1,35x**.
+- Se è installato **Combat Hitboxes**, allarga e abbassa nello stesso modo anche i suoi riquadri visivi dei player.
+- Modifica solo il rendering: le hitbox di gioco, le collisioni e i colpi restano invariati.
 - Non modifica mondo, FOV, telecamera o HUD.
 
 Richiede Fabric Loader e Java 21; non richiede Fabric API.
@@ -19,4 +19,4 @@ Con Java 21 e Gradle installato:
 gradle build
 ```
 
-Il JAR viene generato in `build/libs/players-1.0.0.jar`. Copialo nella cartella `mods` di un'installazione Fabric per Minecraft 1.21.
+Il JAR viene generato in `build/libs/players-1.0.0.jar`. Copialo nella cartella `mods` di un'installazione Fabric per Minecraft 1.21.4.
