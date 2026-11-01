@@ -13,9 +13,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
  */
 @Mixin(PlayerEntityRenderer.class)
 public abstract class LocalPlayerModelMixin {
-    private static final float PLAYER_WIDTH_SCALE = 1.40F;
-    private static final float PLAYER_HEIGHT_SCALE = 0.78F;
-    private static final float PLAYER_DEPTH_SCALE = 1.20F;
+    private static final float PLAYER_WIDTH_SCALE = 1.25F;
+    private static final float PLAYER_HEIGHT_SCALE = 0.72F;
+    private static final float PLAYER_DEPTH_SCALE = 1.00F;
 
     @Inject(method = "scale", at = @At("TAIL"))
     private void players$shapePlayerModel(AbstractClientPlayerEntity player, MatrixStack matrices,

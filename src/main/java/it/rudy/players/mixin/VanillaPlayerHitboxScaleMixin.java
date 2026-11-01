@@ -16,9 +16,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
  */
 @Mixin(EntityRenderDispatcher.class)
 public abstract class VanillaPlayerHitboxScaleMixin {
-    private static final float PLAYER_WIDTH_SCALE = 2.00F;
-    private static final float PLAYER_HEIGHT_SCALE = 1.15F;
-    private static final float PLAYER_DEPTH_SCALE = 1.70F;
+    private static final float PLAYER_WIDTH_SCALE = 2.50F;
+    private static final float PLAYER_HEIGHT_SCALE = 1.25F;
+    private static final float PLAYER_DEPTH_SCALE = 2.00F;
 
     @Inject(method = "renderHitbox", at = @At("HEAD"))
     private static void players$pushVisualHitboxScale(MatrixStack matrices, VertexConsumer vertices,
