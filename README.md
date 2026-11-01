@@ -4,8 +4,8 @@ Mod client-side Fabric per **Minecraft Java 1.21**.
 
 ## Comportamento
 
-- Allarga visivamente il modello di tutti i player a **1,65×** e lo rende più basso con altezza **0,88×**; profondità **1,35×**.
-- Con **F3+B**, applica la stessa forma al contorno visivo delle hitbox dei player.
+- Riduce un po' il modello visibile dei player: larghezza **1,40×**, altezza **0,78×**, profondità **1,20×**.
+- Con **F3+B**, ingrandisce di più il contorno visivo delle hitbox dei player: larghezza **2,00×**, altezza **1,15×**, profondità **1,70×**.
 - Hitbox reali, collisioni e colpi restano invariati.
 - Non modifica mondo, FOV, telecamera o HUD.
 

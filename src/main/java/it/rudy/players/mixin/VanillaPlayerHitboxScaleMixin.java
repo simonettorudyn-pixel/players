@@ -11,14 +11,14 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 /**
- * Scala solo il contorno debug delle hitbox dei player, con la stessa forma
- * del modello. Non modifica il bounding box usato dal gioco per collisioni e colpi.
+ * Scala solo il contorno debug delle hitbox dei player.
+ * Il bounding box usato dal gioco per collisioni e colpi non cambia.
  */
 @Mixin(EntityRenderDispatcher.class)
 public abstract class VanillaPlayerHitboxScaleMixin {
-    private static final float PLAYER_WIDTH_SCALE = 1.65F;
-    private static final float PLAYER_HEIGHT_SCALE = 0.88F;
-    private static final float PLAYER_DEPTH_SCALE = 1.35F;
+    private static final float PLAYER_WIDTH_SCALE = 2.00F;
+    private static final float PLAYER_HEIGHT_SCALE = 1.15F;
+    private static final float PLAYER_DEPTH_SCALE = 1.70F;
 
     @Inject(method = "renderHitbox", at = @At("HEAD"))
     private static void players$pushVisualHitboxScale(MatrixStack matrices, VertexConsumer vertices,
